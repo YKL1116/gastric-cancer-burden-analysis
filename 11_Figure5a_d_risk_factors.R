@@ -1,5 +1,5 @@
-# Figure 4a–d | 胃癌危险因素：吸烟及高钠饮食，男女合计，1990–2023
-# 在项目根目录运行：Rscript 11_Figure4a_d_risk_factors.R
+# Figure 5a–d | 胃癌危险因素：吸烟及高钠饮食，男女合计，1990–2023
+# 在项目根目录运行：Rscript 11_Figure5a_d_risk_factors.R
 # 输入为 data/ 下的 ASMR (percent).xlsx、DALY (percent).xlsx、
 # ASMR (rate).xlsx、DALY (rate).xlsx。可设置 RISK_DATA_DIR、RISK_OUTPUT_DIR。
 # R >= 4.1，ggplot2 >= 3.5，以及 readxl、dplyr、ggh4x、cowplot。
@@ -101,6 +101,6 @@ figure <- cowplot::plot_grid(p_a, p_b, p_c, p_d, ncol = 1, labels = letters[1:4]
                              label_fontface = "plain", label_x = 0.004,
                              rel_heights = c(0.9, 1.1, 0.9, 1.1))
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-out <- file.path(output_dir, "Figure_4a-d_risk_factors.png")
+out <- file.path(output_dir, "Figure_5a-d_risk_factors.png")
 ggsave(out, plot = figure, width = 11, height = 15, units = "in", dpi = 600, bg = "white")
 message("已导出：", normalizePath(out))
